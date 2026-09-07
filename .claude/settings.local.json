@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(npx tsc -b --noEmit 2>&1 | Select-Object -First 60)",
+      "PowerShell(npm run *)",
+      "PowerShell(Remove-Item *)",
+      "PowerShell(npm install *)",
+      "PowerShell(npx tsc -b --noEmit 2>&1 | Select-Object -First 80)",
+      "PowerShell(npx tsc -b --noEmit 2>&1 | Select-Object -First 100)"
+    ]
+  }
+}

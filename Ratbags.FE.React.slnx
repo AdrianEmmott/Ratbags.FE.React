@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Ratbags.FE.React/ratbags.fe.react.esproj">
+    <Build />
+    <Deploy />
+  </Project>
+</Solution>

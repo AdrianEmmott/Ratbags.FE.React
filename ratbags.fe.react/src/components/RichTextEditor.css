@@ -1,0 +1,105 @@
+.rich-text-editor {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--card-bg);
+  overflow: hidden;
+}
+
+.rich-text-toolbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.rich-text-toolbar button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  height: 32px;
+  padding: 0 8px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.rich-text-toolbar button:hover {
+  background: var(--accent-bg);
+  color: var(--accent);
+}
+
+.rich-text-toolbar button.active {
+  background: var(--accent-bg);
+  color: var(--accent);
+  border-color: var(--accent-border);
+}
+
+.rich-text-toolbar-divider {
+  width: 1px;
+  height: 22px;
+  background: var(--border);
+  margin: 0 4px;
+}
+
+.rich-text-content {
+  padding: 16px 20px;
+  min-height: 320px;
+  cursor: text;
+}
+
+.rich-text-content .tiptap {
+  outline: none;
+  color: var(--text);
+  font-size: 16px;
+  line-height: 165%;
+}
+
+.rich-text-content .tiptap p.is-editor-empty:first-child::before {
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  color: var(--text);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.rich-text-content .tiptap h2,
+.rich-text-content .tiptap h3 {
+  color: var(--text-h);
+  margin: 24px 0 8px;
+}
+
+.rich-text-content .tiptap p {
+  margin: 0 0 12px;
+}
+
+.rich-text-content .tiptap ul,
+.rich-text-content .tiptap ol {
+  margin: 0 0 12px;
+  padding-left: 24px;
+}
+
+.rich-text-content .tiptap blockquote {
+  margin: 0 0 12px;
+  padding-left: 16px;
+  border-left: 3px solid var(--accent-border);
+  color: var(--text);
+  opacity: 0.85;
+}
+
+.rich-text-content .tiptap a {
+  color: var(--accent);
+}
+
+.rich-text-content .tiptap img {
+  max-width: 100%;
+  border-radius: 8px;
+}
